@@ -1,3 +1,5 @@
+# All packages  dpkg --get-selections
+#--------------------------------------
 accountsservice					install
 acl						install
 acpi-support					install
