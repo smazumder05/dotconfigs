@@ -9,9 +9,9 @@
 [sendemail]
    smtpencryption = tls
    smtpserver = smtp.gmail.com
-   smtpuser = pavan.sss1991@gmail.com
-   smtppass = icjbejkkqtyvuach
-   smtpserverport = 587
+   smtpuser = 
+   smtppass = 
+   smtpserverport = 
 
 [web]
    browser = google-chrome
