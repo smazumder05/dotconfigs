@@ -53,7 +53,7 @@ curl --silent -L $github_url/git/gitconfig  > /home/vagrant/.gitignore
 #Tmux conf
 curl --silent -L $github_url/tmux/tmux.conf > /home/vagrant/.tmux.conf
 #vimrc
-curl --silent -L $github_url/vim/vimrc > /home/vagrant/.vimrc
+curl --silent -L $github_url/vim/.vimrc > /home/vagrant/.vimrc
 echo ">>> Finished installing scripts..."
 
 
