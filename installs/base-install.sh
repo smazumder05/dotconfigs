@@ -45,7 +45,7 @@ sudo apt-get install -y sysstat
 #Download and install scripts
 echo ">>> Downloading and installing scripts..."
 mkdir /home/vagrant/scripts
-curl --silent -L $github_url/bash/bashrc > /home/vagrant/.bashrc
+curl --silent -L $github_url/bash/bashrc >> /home/vagrant/.bashrc
 curl --silent -L $github_url/bash/tmux.sh > /home/vagrant/scripts/tmux.sh
 #Download gitconfig and gitignore
 curl --silent -L $github_url/git/gitconfig  > /home/vagrant/.gitconfig
@@ -53,7 +53,7 @@ curl --silent -L $github_url/git/gitconfig  > /home/vagrant/.gitignore
 #Tmux conf
 curl --silent -L $github_url/tmux/tmux.conf > /home/vagrant/.tmux.conf
 #vimrc
-curl --silent -L $github_url/vim/.vimrc > /home/vagrant/.vimrc
+curl --silent -L $github_url/vim/.vimrc >> /home/vagrant/.vimrc
 echo ">>> Finished installing scripts..."
 
 
