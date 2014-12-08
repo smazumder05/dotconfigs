@@ -27,6 +27,7 @@ sudo apt-get update
 
 # Install base packages
 # -qq implies -y --force-yes
+sudo apt-get install -y openssh-server
 sudo apt-get install -qq curl unzip git ack-grep software-properties-common build-essential python-dev
 
 # Common fixes for git
@@ -43,7 +44,7 @@ sudo apt-get install -y sysstat
 
 #Download and install scripts
 echo ">>> Downloading and installing scripts..."
-mkdir -f /home/vagrant/scripts
+mkdir /home/vagrant/scripts
 curl --silent -L $github_url/bash/bashrc > /home/vagrant/.bashrc
 curl --silent -L $github_url/bash/tmux.sh > /home/vagrant/scripts/tmux.sh
 #Download gitconfig and gitignore
@@ -53,11 +54,14 @@ curl --silent -L $github_url/git/gitconfig  > /home/vagrant/.gitignore
 curl --silent -L $github_url/tmux/tmux.conf > /home/vagrant/.tmux.conf
 #vimrc
 curl --silent -L $github_url/vim/vimrc > /home/vagrant/.vimrc
+echo ">>> Finished installing scripts..."
 
 
+echo ">>> installing monitoring tools"
 #Install network monitoring tools (ntop listens on eth0 admin/admin requires entry)
 sudo apt-get install -y htop nload iftop iptraf nethogs bmon slurm tcptrack vnstat bwm-ng cbm speedometer pktstat netdiag ifstat dstat collectl
 
+echo ">>> Finished installing monitoring tools"
 #Python pip
 sudo apt-get install -y python-pip
 #install butterfly terminal
