@@ -21,6 +21,8 @@ echo ">>> Installing base packages..."
 
 github_url="https://raw.githubusercontent.com/smazumder05/dotconfigs/master"
 echo $github_url
+#Source directory for installs
+target-dir=
 
 #update
 sudo apt-get update
@@ -44,16 +46,16 @@ sudo apt-get install -y sysstat
 
 #Download and install scripts
 echo ">>> Downloading and installing scripts..."
-mkdir /home/vagrant/scripts
-curl --silent -L $github_url/bash/bashrc >> /home/vagrant/.bashrc
-curl --silent -L $github_url/bash/tmux.sh > /home/vagrant/scripts/tmux.sh
+mkdir /home/$target-dir/scripts
+curl --silent -L $github_url/bash/bashrc >> /home/$target-dir/.bashrc
+curl --silent -L $github_url/bash/tmux.sh > /home/$target-dir/scripts/tmux.sh
 #Download gitconfig and gitignore
-curl --silent -L $github_url/git/gitconfig  > /home/vagrant/.gitconfig
-curl --silent -L $github_url/git/gitconfig  > /home/vagrant/.gitignore
+curl --silent -L $github_url/git/gitconfig  > /home/$target-dir/.gitconfig
+curl --silent -L $github_url/git/gitconfig  > /home/$target-dir/.gitignore
 #Tmux conf
-curl --silent -L $github_url/tmux/tmux.conf > /home/vagrant/.tmux.conf
+curl --silent -L $github_url/tmux/tmux.conf > /home/$target-dir/.tmux.conf
 #vimrc
-curl --silent -L $github_url/vim/.vimrc >> /home/vagrant/.vimrc
+curl --silent -L $github_url/vim/.vimrc >> /home/$target-dir/.vimrc
 echo ">>> Finished installing scripts..."
 
 
@@ -67,11 +69,11 @@ sudo apt-get install -y python-pip
 #install butterfly terminal
 #sudo pip install butterfly
 
-if [ ! -f "/home/smdeveloper/scripts/run-butterfly.sh" ]; then
- echo ">>> Creating butterfly run script."; 
- echo "git hub url is:";
- echo $github_url;
-fi
+#if [ ! -f "/home/$target-dir/scripts/run-butterfly.sh" ]; then
+ #echo ">>> Creating butterfly run script."; 
+ #echo "git hub url is:";
+ #echo $github_url;
+#fi
 
 #C++ installs
 #apt-get -y install build-essential
