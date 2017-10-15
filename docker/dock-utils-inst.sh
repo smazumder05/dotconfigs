@@ -6,8 +6,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 #install dock for docker dev 
-curl https://raw.githubusercontent.com/bripkens/dock/master/dock -so ~/bin/dock && \
-     chmod +x ~/bin/dock && \
-     dock -u && \
-     echo "dock installation successful. Try running 'dock'"
+sudo curl https://raw.githubusercontent.com/bripkens/dock/master/dock -so ~/bin/dock
+sudo chmod +x ~/bin/dock
+cd ~/bin/dock -u
+echo "dock installation successful. Try running 'dock'"
 dock -l
