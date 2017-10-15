@@ -9,5 +9,8 @@ sudo docker run -i -t ubuntu /bin/bash
 sudo usermod -aG docker $(whoami) #logout and try again
 
 #install dock for docker dev 
-curl https://raw.githubusercontent.com/brigade/dock/master/script/install-dock | bash
+curl https://raw.githubusercontent.com/bripkens/dock/master/dock -so ~/bin/dock && \
+     chmod +x ~/bin/dock && \
+     dock -u && \
+     echo "dock installation successful. Try running 'dock'"
 
