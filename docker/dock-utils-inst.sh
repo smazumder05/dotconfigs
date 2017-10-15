@@ -6,7 +6,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 #install dock for docker dev 
-sudo mkdir -p ~/bin
+mkdir -p ~/bin
 sudo curl https://raw.githubusercontent.com/bripkens/dock/master/dock -so ~/bin/dock
 sudo chmod +x ~/bin/dock
 cd ~/bin/dock -u
