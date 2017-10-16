@@ -61,7 +61,7 @@ echo ">>> Finished installing scripts..."
 
 echo ">>> installing monitoring tools"
 #Install network monitoring tools (ntop listens on eth0 admin/admin requires entry)
-sudo apt-get install -y htop nload iftop iptraf nethogs bmon slurm tcptrack vnstat bwm-ng cbm speedometer pktstat netdiag ifstat dstat collectl
+sudo apt-get install -y htop nload iftop iptraf nethogs bmon slurm tcptrack vmstat bwm-ng cbm speedometer pktstat netdiag ifstat dstat collectl
 
 echo ">>> Finished installing monitoring tools"
 #Python pip
