@@ -89,7 +89,6 @@ cleanup() {
     exit 0
 }
 
-
 main() {
     if [ "$1" == "--version" ]; then
         INSTALL_VERSION=$2
