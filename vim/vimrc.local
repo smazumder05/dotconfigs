@@ -1,10 +1,9 @@
-  1 execute pathogen#infect()
-  2 syntax on
-  3 filetype plugin indent on
-  4 
-  5 let g:rehash256 = 1
-  6 let g:molokai_original = 1
-  7 colorscheme molokai
-  8 autocmd vimenter * NERDTree
-  9 set guifont=Courier\ 10Pitch\ 14
- 10 nmap <F8> :TagbarToggle<CR>                  
+ execute pathogen#infect()
+ syntax on
+ filetype plugin indent on
+ let g:rehash256 = 1
+ let g:molokai_original = 1
+ colorscheme molokai
+ autocmd vimenter * NERDTree
+ set guifont=Courier\ 10Pitch\ 14
+ nmap <F8> :TagbarToggle<CR>                  
